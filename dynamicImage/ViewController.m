@@ -26,10 +26,7 @@
 //    https://www.2cto.com/kf/201507/415322.html
 //    1、dispatch_sync在等待block语句执行完成，而block语句需要在主线程执行，所以dispatch_sync如果在主线程调用就会死锁
 //    2、dispatch_sync是同步的，本身就会阻塞当前线程，也就是主线程，而又往主线程塞进去一个block
-            dispatch_sync(dispatch_get_global_queue(0, 0), ^{
-                NSLog(@"1");
-            });
-    
+ 
 //    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 //        NSLog(@"1.0");
     //打印不出来

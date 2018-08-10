@@ -37,13 +37,13 @@
     
     
 
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    dispatch_async(queue, ^{
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//    dispatch_async(queue, ^{
         if (!self.timer) {
             self.timer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(updateShare) userInfo:nil repeats:YES];
             [[NSRunLoop currentRunLoop]addTimer:self.timer forMode:NSRunLoopCommonModes];
         }
-    });
+//    });
 //    CADisplayLink *disPlay = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateShare)];
 //    [disPlay addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
